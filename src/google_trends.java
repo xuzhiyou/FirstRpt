@@ -1,4 +1,4 @@
-import org.apache.http.HttpHost;
+/*import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.Credentials;
 import org.apache.http.auth.NTCredentials;
@@ -19,7 +19,7 @@ public class google_trends {
         String u = "myuser@gmail.com";
         String p = "mypasswd";
 
-        /* OPTIONAL: setup a proxy with NTLM authentication */
+         OPTIONAL: setup a proxy with NTLM authentication 
         HttpHost proxy = new HttpHost("proxy.mydomain.com", 8080, "http");
         Credentials credentials = new NTCredentials("myLogin", "myPasswd", "", "DOMAIN");
         
@@ -27,20 +27,20 @@ public class google_trends {
         httpClient.getCredentialsProvider().setCredentials(new AuthScope(proxy.getHostName(), proxy.getPort()), credentials);
         httpClient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxy);
 
-        /* Creates a new authenticator */
+         Creates a new authenticator 
         GoogleAuthenticator authenticator = new GoogleAuthenticator(u, p, httpClient);
 
-        /* Creates a new Google Trends Client */
+         Creates a new Google Trends Client 
         GoogleTrendsClient client = new GoogleTrendsClient(authenticator, httpClient);
         GoogleTrendsRequest request = new GoogleTrendsRequest("bananas");
 
-        /* Here the default request params can be modified with getter/setter methods */
+         Here the default request params can be modified with getter/setter methods 
         String content = client.execute(request);
 
-        /* The default request downloads a CSV available in content */
+         The default request downloads a CSV available in content 
         GoogleTrendsCsvParser csvParser = new GoogleTrendsCsvParser(content); //new GoogleTrendsCsvParser(content);
-        /* Get a specific section of the CSV */
+         Get a specific section of the CSV 
         String section = csvParser.getSectionAsString("Top searches for", true);
         System.out.println(section);
     }
-}
+}*/
