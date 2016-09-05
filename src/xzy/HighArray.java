@@ -1,3 +1,4 @@
+package xzy;
 /**
  * javadoc: class HighArray
  * Array class test

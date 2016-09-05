@@ -1,3 +1,4 @@
+package xzy;
 import java.util.Date;
 import java.util.Random;
 

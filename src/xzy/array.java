@@ -1,3 +1,4 @@
+package xzy;
 import java.util.Random;
 
 public class array {
