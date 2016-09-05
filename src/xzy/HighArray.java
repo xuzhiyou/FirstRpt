@@ -37,7 +37,7 @@ public class HighArray {
 	
 	/**
 	 * delete a value:
-	 * @param value
+	 * @param value delete-the-value
 	 * @return true or false
 	 */
 	public boolean delete(long value){

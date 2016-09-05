@@ -56,13 +56,13 @@ public class Test extends HighArray {
 	
 
 	/**
-	* 方法：设置姓名. <br/>
-	* {@code Map<Strting, Double>}   code-map  <br/>
-	* {@literal Map<Strting, Double>}  literal-map <br/>
-	* {@code Map<Strting, Double>}   code-map  <br/>
+	* 方法：设置姓名. <br>
+	* {@code Map<Strting, Double>}   code-map  <br>
+	* {@literal Map<Strting, Double>}  literal-map <br>
+	* {@code Map<Strting, Double>}   code-map  <br>
 	* test &#10    &# <br>
 	* {@literal &#10    &#}<br>
-	* #  $  %  ^  &  *   {  }  <  >  @   
+	* #  $  %  ^  *   {  }  @   
 	* @param name String类型，姓名
 	* 查看下面三个的区别：
 	* 此方法与{@link HighArray#find(long)} 中某一方法作用相同111；
@@ -78,10 +78,10 @@ public class Test extends HighArray {
 	* 我们查看1: @see {@link #getName()}
 	* @see #getName()
 	* @see #getName() {@link #getName()}
-	* @see #getName()         <br/>前面
+	* @see #getName()         <br>前面
 	* @see #getName() getName1  @see #getName() getName4
 	* @see #getName() getName2   前面
-	* @see #getName() getName3 <br/>前面
+	* @see #getName() getName3 <br>前面
     * @see String
     * @see String#equals
     * @see String#equals(Object) bbbbb
@@ -90,6 +90,7 @@ public class Test extends HighArray {
     * @see xzy.HighArray#insert(long)
     * @see HighArray#find(long)
     * @see HighArray
+    * @see algorithm.Graph#path()
     * @see xzy.MainTest#main(String[])
     * 
     * code test:
@@ -103,7 +104,6 @@ public class Test extends HighArray {
 	/**
 	* 方法：获取名称
 	* @return 返回姓名 name
-	* for return 
 	*/
 	public String getName(){
 		return name;
@@ -112,8 +112,8 @@ public class Test extends HighArray {
 	@Override
 	/**
 	 * 重写 HighArray 类中的delete方法：
-	 * @param this-value
-	 * 此方法继承 {@inheritDoc} Inherits a comment from the immediate surperclass 继承文档只能写在本类的方法前
+	 * @param 标记继承，此处的均无法显示。
+	 * 此方法继承 {@inheritDoc} Inherits a comment 继承文档只能写在本类的方法前
 	 * @return boolean
 	 * @see #getName()
 	 */
@@ -123,8 +123,10 @@ public class Test extends HighArray {
 
 	/**
 	 * 抛出异常
+	 * @param file file-path
 	 * @exception IOException test-exception
-	 * @throws IOException when read file the exception would be occur 两个都可以
+	 * @throws IOException when read file the exception would be occur 后一个会警告
+	 * @return a string line
 	 */
 	public String firstLine(String file) throws IOException {
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(file)));
@@ -149,7 +151,7 @@ public class Test extends HighArray {
 	/**
 	 * synchronized-test
 	 * @return nothing
-	 * @throws IOException
+	 * @throws IOException there-nothing
 	 */
 	public static int get() throws IOException{
 		synchronized (Test.class) {
@@ -182,8 +184,8 @@ public class Test extends HighArray {
 	
 	 /**
 	  * 测试：code-literal-test.
-	  * <br/>
-	  * No.1<br/>
+	  * <br>
+	  * No.1<br>
 	  * <pre>
 	  * <code>new BeanTranslator.Builder()
 	  *   .translate(
@@ -196,7 +198,7 @@ public class Test extends HighArray {
 	  * </code>
 	  * </pre>
 	  * 
-	  * No.2-new-no-code<br/>
+	  * No.2-new-no-code-会出错<br>
 	  * <pre>
 	  * <code>new BeanTranslator.Builder()
 	  *   .translate(
@@ -209,7 +211,7 @@ public class Test extends HighArray {
 	  * </code>
 	  * </pre>
 	  * 
-	  *  No.3-no-code<br/>
+	  *  No.3-no-code<br>
 	  * <pre>
 	  * new BeanTranslator.Builder()
 	  *   .translate(
@@ -221,7 +223,7 @@ public class Test extends HighArray {
 	  *   .build();
 	  * </pre>
 	  * 
-	  *  No.4-no-pre<br/>
+	  *  No.4-no-pre<br>
 	  * <code>new BeanTranslator.Builder()
 	  *   .translate(
 	  *     new{@code Translator<String, Integer>}(String.class, Integer.class){
@@ -233,7 +235,7 @@ public class Test extends HighArray {
 	  * </code>
 	  * 
 	  * <br>
-	  *  No.5-new-literal<br/>
+	  *  No.5-new-literal<br>
 	  * <pre>
 	  * <code>new BeanTranslator.Builder()
 	  *   .translate(
@@ -246,7 +248,7 @@ public class Test extends HighArray {
 	  * </code>
 	  * </pre>
 	  * 
-	  * No.6-Override-code<br/>
+	  * No.6-Override-code<br>
 	  * <pre>
 	  * <code>new BeanTranslator.Builder()
 	  *   .translate(
@@ -259,8 +261,8 @@ public class Test extends HighArray {
 	  * </code>
 	  * </pre>
 	  * 
-	  * No.7 cc <br> dd <br/>  都可以换行  <br>
-	  * 结论：code与literal作用相同，pre用来固定换行空格等样式不可去，对于<>等字符若已用 @ code或literal，<code></code>可不用，反之不可以。
+	  * No.7 <br>
+	  * 结论：code与literal作用相似，pre用来固定换行空格等样式不可去.
 	  * <br><br>
 	  * 
 	  * N0.8-code
