@@ -1,8 +1,9 @@
-package xzy;
+package doctest;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import xzy.*;
 
 /**
 * Description:
@@ -46,7 +47,7 @@ public class Test extends HighArray {
 	
 
 	/**
-	* 方法：设置姓名  <br/>
+	* 方法：设置姓名. <br/>
 	* {@code List<String>}   code-list  <br/>
 	* {@literal Map<Strting, Double>}  literal-map
 	* testttttttt &#10    &#010
@@ -75,6 +76,9 @@ public class Test extends HighArray {
     * @see String#equals(Object) bbbbb
     * @see String#equals(Object)
     * @see #getName() getName4
+    * @see xzy.HighArray#insert(long)
+    * @see HighArray#equals(Object)
+    * @see xzy.MainTest#main(String[])
     * 
     * ttttt
     * 
