@@ -1,4 +1,11 @@
 package xzy;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 /**
  * javadoc: class HighArray
  * Array class test
@@ -9,6 +16,12 @@ public class HighArray {
 
 	private long[] arr;
 	private int nums;
+	
+	/**
+	 * the number is test for javadoc
+	 */
+	public int num = 10;     //for javadoc test
+	
 	public HighArray(int max){
 		arr=new long[max];
 		nums=0;
@@ -24,6 +37,11 @@ public class HighArray {
 		return true;
 	}
 	
+	/**
+	 * find-a-number
+	 * @param num the number is num
+	 * @return true or false
+	 */
 	public boolean find(long num){
 		int i;
 		for(i=0;i<nums;i++){
@@ -36,11 +54,12 @@ public class HighArray {
 	}
 	
 	/**
-	 * delete a value:
-	 * @param value delete-the-value
-	 * @return true or false
+	 * delete a value:-HighArray
+	 * @param value delete-the-value-HighArray
+	 * @return true or false-HighArray
+	 * @exception IOException exception-HighArray
 	 */
-	public boolean delete(long value){
+	public boolean delete(long value) throws IOException, FileNotFoundException{
 		int i;
 		for(i=0;i<nums;i++){
 			if(arr[i]==value)
@@ -60,5 +79,33 @@ public class HighArray {
 			System.out.print(arr[i]+" ");
 		System.out.println();
 	}
+	
+	
+	//test for javadoc
+	
+	/**
+	 * the method override object method-HighArray
+	 * @return nothing-HighArray
+	 */
+	public String toString() {
+		return "";
+	}
+	
+	
+	/**
+	 * comments-HighArray
+	 * @param line input-HighArray
+	 * @throws FileNotFoundException if there no file-HighArray
+	 */
+	public String getString(String line) throws FileNotFoundException {
+		return "";
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 }
