@@ -5,3 +5,5 @@ http://jingyan.baidu.com/article/f7ff0bfc7181492e27bb1360.html
 http://ifeve.com/maven-1/       maven learing
 http://docs.oracle.com/javase/1.5.0/docs/tooldocs/windows/javadoc.html#maindescription  javadoc
 http://blog.chinaunix.net/uid-725717-id-2060139.html  javadoc
+http://blog.sina.com.cn/s/blog_521c63500100b96w.html    javadoc comment
+http://blog.csdn.net/listener_ri/article/details/45190483    javadoc

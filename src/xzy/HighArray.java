@@ -83,6 +83,8 @@ public class HighArray {
 	
 	//test for javadoc
 	
+	public static final int VALUE = 100;
+	
 	/**
 	 * the method override object method-HighArray
 	 * @return nothing-HighArray

@@ -32,8 +32,14 @@ public class Test extends HighArray implements TestInterface{
 	
 	/**
 	 * the num is 20
+	 * HighArray.VALUE:{@value xzy.HighArray#VALUE}
 	 */
-	public int num = 20;
+	public static int num = 20;
+	
+	/**
+	 * distances of point (x,y)
+	 */
+	public int x, y;
 	
 	/**
 	 * value只能在常亮中使用
@@ -126,6 +132,7 @@ public class Test extends HighArray implements TestInterface{
 	/**
 	 * 重写 HighArray 类中的find方法：
 	 * @param num find the number
+	 * @param n find the n 多余的
 	 */
 	public boolean find(long num){
 		return true;
@@ -178,8 +185,34 @@ public class Test extends HighArray implements TestInterface{
 		
 	}
 	
+	/**
+	 * type parameter-Test
+	 * @param highRrary parameter-Test
+	 */
+	public void typePara(HighArray highRrary){
+		
+	}
+
 	
+	/**
+	 * type parameter-test 类型参数与一般参数
+	 * @param string the string to be converted-Test
+	 * @param type the type to convert the string to-Test
+	 * @param <T>     the type of the element
+     * @param <V>     the value of the elemen
+	 * @return nothing-Test
+	 */
+	public <T, V extends T> V convert(String string, Class<T> type) {
+		return null;
+    }
 	
+	/**
+	 * two parameter test
+	 * @param s1 the first parameter
+	 */
+	public void twoPara(String s1,String s2){
+		
+	}
 	
 	
 	

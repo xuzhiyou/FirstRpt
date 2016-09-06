@@ -1,0 +1,37 @@
+1、@param  parameter-name description  参数注释标签。 (method, class)
+    A、方法的普通参数(parameter)  parameter-name 即是参数名称
+    B、类或方法的类型参数(type parameter) parameter-name  <类型>
+              若方法含有多个参数，在注释时没有全部都进行param注释，会警告。若多加了param，文档中仍会全部显示但会报错。
+              例： 
+      /**
+      * @param string  the string to be converted
+      * @param type    the type to convert the string to
+      * @param <T>     the type of the element
+      * @param <V>     the value of the element
+      */
+     <T, V extends T> V convert(String string, Class<T> type) {}
+               
+                 
+         
+ 2、@return  description      返回值描述。主要描述返回值的类型与取值范围。  (method)。
+           具有返回值的方法只能包含一个 @return，包含多个或缺失会警告，并且只有第一个有效。
+           例：        * @return the value is conversion result
+           
+ 3、@since  since-text     标记该处 从此版本开始使用。  (overview, package, class, interface, constructor, method, field)
+           可有多个 同 @author 
+           例：       * @since 1.5
+           
+ 4、@version  version-text     版本标记。记录此版本包含哪些内容。  (overview, package, class)
+           可有多个 同 @author 
+           例：       * @version 1.4         
+           
+5、{@value  package.class#field}     常量的值。      (field)-(static final )
+   A、无参数：   {@value} 即代表其紧挨着的常量值。
+   B、有参：      {@value  package.class#field} 即代表常量field的值
+          例：                    * static final: {@value}  
+           * HighArray.VALUE:{@value xzy.HighArray#VALUE}
+           
+           
+           
+ 对于 @see 等后面的java类没有出现连接是因为没有一块编译。比如String无超链接，因为没有把 java.lang 包或者 Stirng类的源文件一起加入编译。
+ 异常类名应该根据源文件的 import 语句确定是写出类名还是类全名          
