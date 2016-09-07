@@ -5,27 +5,30 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import xzy.*;
+import java.util.Arrays;
 
 /**
 * Description:
-* <br> ÕâÊÇÒ»¸ö²âÊÔ Àà
-* ´´½¨Ê±¼ä 2016-09-02
+* <br> ç¬¬ä¸€ä¸ªjavadocæµ‹è¯•ç±»
+* 2016-09-02<br>
+* è¿™æ˜¯åœ¨utf-8ä¸‹æ–°åŠ å…¥çš„ä¸­æ–‡
 * this is a test
 * @author xuzhiyou
 * @author x z y
 * @author xzy--xzy2--xzy3
 * @version 1.0
+* @version 1.1
 * See the <a href="{@docRoot}/../testDoc/overview-tree.html">Copyright</a>.<br>
 */
 public class Test extends HighArray implements TestInterface{
 	
 	/**
-	* ¶ÔÏó³ÉÔ±£¬private:password
+	* private:password
 	*/
 	private int password;
 	
 	/**
-	* ¹«ÓĞ³ÉÔ±£ºpublic:name
+	* public:name
 	*/
 	public String name;
 	protected String sex = "men";
@@ -42,16 +45,16 @@ public class Test extends HighArray implements TestInterface{
 	public int x, y;
 	
 	/**
-	 * valueÖ»ÄÜÔÚ³£ÁÁÖĞÊ¹ÓÃ
+	 * value
 	 * static final: {@value}  
 	 * static ID: {@value #ID}
 	 */
 	public static final double ID = 12345678;
 
 	/**
-	* ¹¹Ôìº¯Êı.²ÎÊıÎªpasswordÓë name
-	* @param password intÀàĞÍ£¬ÃÜÂë
-	* @param name StringÀàĞÍ£¬ĞÕÃû
+	* password  name
+	* @param password intï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½
+	* @param name Stringï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½
 	*
 	*/
 	public Test(int password ,String name){
@@ -61,32 +64,27 @@ public class Test extends HighArray implements TestInterface{
 	
 
 	/**
-	* ·½·¨£ºÉèÖÃĞÕÃû. <br>
 	* {@code Map<Strting, Double>}   code-map  <br>
 	* {@literal Map<Strting, Double>}  literal-map <br>
 	* {@code Map<Strting, Double>}   code-map  <br>
-	* test &#10    &# <br>
-	* {@literal &#10    &#}<br>
-	* #  $  %  ^  *   {  }  @   
-	* @param name StringÀàĞÍ£¬ĞÕÃû
-	* ²é¿´ÏÂÃæÈı¸öµÄÇø±ğ£º
-	* ´Ë·½·¨Óë{@link HighArray#find(long)} ÖĞÄ³Ò»·½·¨×÷ÓÃÏàÍ¬111£»
-	* ´Ë·½·¨Óë{@link HighArray#find(long) find} ÖĞÄ³Ò»·½·¨×÷ÓÃÏàÍ¬111-2£»
-	* ´Ë·½·¨Óë{@linkplain HighArray#find(long)} ÖĞÄ³Ò»·½·¨×÷ÓÃÏàÍ¬222£»
-	* ´Ë·½·¨Óë{@linkplain HighArray#find(long) find} ÖĞÄ³Ò»·½·¨×÷ÓÃÏàÍ¬222-2£»
-	* ´Ë·½·¨Óë{@linkplain String#equals} ÖĞÄ³Ò»·½·¨×÷ÓÃÏàÍ¬333£»
-	* ´Ë·½·¨Óë{@linkplain String#equals(Object)} ÖĞÄ³Ò»·½·¨×÷ÓÃÏàÍ¬333-2£»
-	                ´Ë·½    ·¨Óë HighArray#find(long) ÖĞÄ³Ò»·½·¨×÷ÓÃÏàÍ¬333£»
+	* @param name String
+	* æŸ¥çœ‹{@link HighArray#find(long)} æ–¹æ³•-111
+	* æŸ¥çœ‹{@link HighArray#find(long) find} æ–¹æ³•-111-2
+	* æŸ¥çœ‹{@linkplain HighArray#find(long)} æ–¹æ³•-222
+	* æŸ¥çœ‹{@linkplain HighArray#find(long) find} æ–¹æ³•-222-2
+	* æŸ¥çœ‹{@linkplain String#equals} æ–¹æ³•-333
+	* æŸ¥çœ‹{@linkplain String#equals(Object)} æ–¹æ³•-333-2
+	* HighArray#find(long) æ–¹æ³•-333
 	* 
 	* 
-	* ÎÒÃÇ²é¿´1: @see #getName()
-	* ÎÒÃÇ²é¿´1: @see {@link #getName()}
+	* æŸ¥çœ‹: @see #getName()
+	* æŸ¥çœ‹: @see {@link #getName()}
 	* @see #getName()
 	* @see #getName() {@link #getName()}
-	* @see #getName()         <br>Ç°Ãæ
+	* @see #getName()         <br>
 	* @see #getName() getName1  @see #getName() getName4
-	* @see #getName() getName2   Ç°Ãæ
-	* @see #getName() getName3 <br>Ç°Ãæ
+	* @see #getName() getName2
+	* @see #getName() getName3 <br>
     * @see String
     * @see String#equals
     * @see String#equals(Object) bbbbb
@@ -96,6 +94,7 @@ public class Test extends HighArray implements TestInterface{
     * @see HighArray#find(long)
     * @see HighArray
     * @see HighArray#find
+    * @see Arrays#toString(int[])
     * @see xzy.MainTest#main(String[])
     * 
     * code test:
@@ -107,19 +106,17 @@ public class Test extends HighArray implements TestInterface{
 	}
 
 	/**
-	* ·½·¨£º»ñÈ¡Ãû³Æ
-	* @return ·µ»ØĞÕÃû name
+	* @return name
 	*/
 	public String getName(){
 		return name;
 	}
 	
 	/**
-	 * ÖØĞ´ HighArray ÀàÖĞµÄdelete·½·¨£º
-	 * @param value ±ê¼Ç¼Ì³Ğ-Test
+	 * ç»§æ‰¿ HighArray æ–¹æ³•
+	 * @param value delete-value-Test
 	 * @return {@inheritDoc}
 	 * @see #getName()
-	 * @see "JAVA Éè¼ÆË¼Ïë"
 	 * @see <a href="spec.html#section">Java Spec</a>
 	 * @exception IOException exception-Test
 	 * @throws FileNotFoundException file-exception-Test
@@ -130,9 +127,8 @@ public class Test extends HighArray implements TestInterface{
 	}
 	
 	/**
-	 * ÖØĞ´ HighArray ÀàÖĞµÄfind·½·¨£º
+	 * ç»§æ‰¿ HighArray æ–¹æ³•
 	 * @param num find the number
-	 * @param n find the n ¶àÓàµÄ
 	 */
 	public boolean find(long num){
 		return true;
@@ -195,7 +191,7 @@ public class Test extends HighArray implements TestInterface{
 
 	
 	/**
-	 * type parameter-test ÀàĞÍ²ÎÊıÓëÒ»°ã²ÎÊı
+	 * type parameter-test
 	 * @param string the string to be converted-Test
 	 * @param type the type to convert the string to-Test
 	 * @param <T>     the type of the element
@@ -207,10 +203,15 @@ public class Test extends HighArray implements TestInterface{
     }
 	
 	/**
-	 * two parameter test
+	 * two parameter test public
 	 * @param s1 the first parameter
 	 */
 	public void twoPara(String s1,String s2){
+		
+	}
+	
+	@Override
+	public void twoPara2(String s1, String s2){
 		
 	}
 	
@@ -219,10 +220,10 @@ public class Test extends HighArray implements TestInterface{
 	
 	
 	/**
-	 * Å×³öÒì³£
+	 * a method
 	 * @param file file-path
 	 * @exception IOException test-exception
-	 * @throws IOException when read file the exception would be occur ºóÒ»¸ö»á¾¯¸æ
+	 * @throws IOException when read file the exception would be occur
 	 * @return a string line
 	 */
 	public String firstLine(String file) throws IOException {
@@ -235,7 +236,7 @@ public class Test extends HighArray implements TestInterface{
 	/**
 	 * Save the state of this object to a stream.
      *
-     * @serialData serialData-test ²»ÖªµÀÈçºÎÓÃ£¬´Ë´¦ÎŞÏÔÊ¾£¬¿ÉÒÔÓÃÀ´ĞŞÊÎ·½·¨£¬µ« serial¡¢ serialField ²»¿ÉÒÔ¡£
+     * @serialData serialData-test
 	 */
 	public void output(){}
 	
@@ -257,10 +258,27 @@ public class Test extends HighArray implements TestInterface{
 	}
 	
 	
+	/**
+	 * new data test dataã€authorä¸æ˜¾ç¤º
+	 * @param string
+	 * @author xuzhiyou
+	 * @data 2016å¹´9æœˆ7æ—¥ ä¸‹åˆ4:05:11
+	 */
+	public void testNewBiaoqain(String string) {
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
 	protected void dispaly(String str){
 
 		/**
-		 * line-test. ¶ÔÓÚÄÚ²¿µÄ×¢ÊÍÃ»ÓĞ×÷ÓÃ£¬±»ºöÂÔ¡£
+		 * line-test
 		 */
 		
 		String line = str;
@@ -272,7 +290,7 @@ public class Test extends HighArray implements TestInterface{
 		int x = 10;
 		
 		/**
-		 * for-Óï¾ä-test Í¬ÉÏ
+		 * for-test
 		 */
 		for(int i = 0; i < 3; i++){
 			System.out.println("Done.");
@@ -280,7 +298,7 @@ public class Test extends HighArray implements TestInterface{
 	}
 	
 	 /**
-	  * ²âÊÔ£ºcode-literal-test.
+	  * code-literal-test.
 	  * <br>
 	  * No.1<br>
 	  * <pre>
@@ -295,7 +313,7 @@ public class Test extends HighArray implements TestInterface{
 	  * </code>
 	  * </pre>
 	  * 
-	  * No.2-new-no-code-»á³ö´í<br>
+	  * No.2-new-no-code<br>
 	  * <pre>
 	  * <code>new BeanTranslator.Builder()
 	  *   .translate(
@@ -370,9 +388,6 @@ public class Test extends HighArray implements TestInterface{
 	     .build();
 	   </code>
 	  </pre>
-	  * No.8 <br>
-	  * ½áÂÛ£ºcodeÓëliteral×÷ÓÃÏàËÆ£¬preÓÃÀ´¹Ì¶¨»»ĞĞ¿Õ¸ñµÈÑùÊ½²»¿ÉÈ¥.
-	  * <br><br>
 	  * 
 	  * N0.9-code
 	  * <pre>
@@ -387,11 +402,8 @@ public class Test extends HighArray implements TestInterface{
 	  * {@literal public List<Object> getObjects()} <br>
 	  *  public List<Object> getObjects()<br>
 	  *  <pre> public List<Object> getObjects() </pre><br>
-	  * 
 	  * <code>{@code public List<Object> getObjects()} </code><br>
 	  * <code>{@literal public List<Object> getObjects()} </code><br>
-	  * 
-	  * 
 	  * @param line input-string
 	  */
 	public void codeTest(String line) {
@@ -399,8 +411,7 @@ public class Test extends HighArray implements TestInterface{
 	}
 	
 	/**
-	 * ¾²Ì¬´úÂë¿é-test.
-	 * °üº¬Ò»¸ö×Ö·û´®±äÁ¿¡£
+	 * é™æ€å—-test.
 	 */
 	static {
 		/**
@@ -432,7 +443,6 @@ public class Test extends HighArray implements TestInterface{
 	 */
 	
 	public void output2(){}
-
 
 
 

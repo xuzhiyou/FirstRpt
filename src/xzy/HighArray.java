@@ -38,20 +38,17 @@ public class HighArray {
 	}
 	
 	/**
-	 * find-a-number
-	 * @param num the number is num
-	 * @return true or false
+	 * find a number-HighArray
+	 * @param value find the number-HighArray
 	 */
-	public boolean find(long num){
-		int i;
-		for(i=0;i<nums;i++){
-			if(arr[i]==num)
-				break;
-		}
-		if(i==nums)
-			return false;
-		return true;
+	public boolean find(long value){
+		for(int i = 0; i < nums; i ++){
+			if(value == arr[i])
+				return true;
+		} 
+		return false;
 	}
+	
 	
 	/**
 	 * delete a value:-HighArray
@@ -103,11 +100,24 @@ public class HighArray {
 		return "";
 	}
 	
+	/**
+	 * twoPara2-HighArray
+	 * @param string1 first string-HighArray
+	 * @param string2 second string-HighArray
+	 */
+	public void twoPara2(String string1,String string2) {
+		
+	}
 	
 	
-	
-	
-	
+	/**
+	 * twoPara3-HighArray
+	 * @param string1 first string-HighArray
+	 * @param string2 second string-HighArray
+	 */
+	public void twoPara3(String string1,String string2) {
+		
+	}
 	
 	
 }

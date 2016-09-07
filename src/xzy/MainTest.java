@@ -12,10 +12,10 @@ public class MainTest {
 		harr.insert(88);harr.insert(11);harr.insert(00);harr.insert(66);harr.insert(33);
 		harr.show();
 		int value=35;
-		if(harr.find(35))
-			System.out.println("found "+value);
-		else
-			System.out.println("not found "+value);
+//		if(harr.find(35))
+//			System.out.println("found "+value);
+//		else
+//			System.out.println("not found "+value);
 		harr.delete(55);
 		harr.delete(00);
 		harr.delete(99);
