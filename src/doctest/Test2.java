@@ -8,4 +8,8 @@ package doctest;
  */
 public class Test2 {
 
+	public String getBid(TestInterface testInterface, TestConversionInterface testConversionInterface) {
+		String string = "";
+		return testInterface.doctest_In_1(string) + testConversionInterface.getConvertions();
+	}
 }

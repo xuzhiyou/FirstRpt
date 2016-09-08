@@ -20,6 +20,7 @@ public class a {
 		int z2 = random3.nextInt(100);
 		System.out.println("random3:   " + "i: " + i2 + " j: " + j2 + " z: " + z2);
 		
+		System.out.println(Math.round(-2.5));
 
 	}
 
