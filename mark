@@ -1,0 +1,38 @@
+Package Comment Files   包注释文件：即对包进行注释，也可用javadoc标签。
+主要有两种形式，也即两种命名：
+A、.java 文件，名称：     package-info.java
+例：     注意不要漏掉最后package这句话。  在最前面不要加任何标签，直接进行文本写入。
+	/**
+	 * Provides the classes necessary to create an applet and the classes an applet uses 
+	 * to communicate with its applet context. 
+	 * <p>
+	 * The applet framework involves two entities: 
+	 * the applet and the applet context. An applet is an embeddable window (see the 
+	 * {@link java.awt.Panel} class) with a few extra methods that the applet context 
+	 * can use to initialize, start, and stop the applet.
+	 *
+	 * @since 1.0
+	 * @see java.awt
+	 */
+	package java.lang.applet;
+	
+B、.html 文件，名称：   package.html
+	例：  注意在html中不应该再加/** and */ 或*。body与文本之间不应加任何标签。
+		 <HTML>
+		<BODY>
+		Provides the classes necessary to create an applet and the classes an applet uses 
+		to communicate with its applet context. 
+		<p>
+		The applet framework involves two entities: 
+		the applet and the applet context. An applet is an embeddable window (see the 
+		{@link java.awt.Panel} class) with a few extra methods that the applet context 
+		can use to initialize, start, and stop the applet.
+		
+		@since 1.0
+		@see java.awt
+		</BODY>
+		</HTML>
+		
+		
+上述两种方式的命名不能改，将包注释文件放到根目录下，即与正常的.java文件放在一起。且一个包只能放一个包注释文件，或 package.html或package-info.java。
+		
