@@ -2,7 +2,7 @@ package xzy;
 import java.util.Date;
 import java.util.Random;
 
-public class a {
+public class HelloWorld {
 	public static void main(String[] args){
 		double num = 10;
 		Random random = new Random(new Date().getTime());
