@@ -18,6 +18,7 @@ import java.util.Arrays;
 * @author xzy--xzy2--xzy3
 * @version 1.0
 * @version 1.1
+* @version %I%, %G%
 * See the <a href="{@docRoot}/../testDoc/overview-tree.html">Copyright</a>.<br>
 */
 public class Test extends HighArray implements TestInterface{

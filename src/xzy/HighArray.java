@@ -120,4 +120,20 @@ public class HighArray {
 	}
 	
 	
+	public long[] getArr() {
+		return arr;
+	}
+
+	public void setArr(long[] arr) {
+		this.arr = arr;
+	}
+
+	public int getNums() {
+		return nums;
+	}
+
+	public void setNums(int nums) {
+		this.nums = nums;
+	}
+	
 }
