@@ -123,4 +123,38 @@ public class UnitTestClass20160913Test {
         System.out.println("Tear down");  
     }  
 
+	 
+	 
+//	   3. 记录void 方法的行为
+//     Easymock.expect(userDao.getById("1001")) 这样的用法只能使用与mock对象的有返回值的方法，如果mock对象的方法是void，则需要使用expectLastCall()：
+//     userDao.someVoidMethod();
+//     Easymock.expectLastCall();
+//     和Easymock.expect(***)一样，同样支持指定调用次数，抛出异常等：
+//     Easymock.expectLastCall().times(3);
+//     Easymock.expectLastCall().andThrow(new RuntimeException("some error"));
+	 
+//	 如果需要在相对复杂的测试用例中使用多个 Mock 对象，EasyMock 提供了另外一种生成和管理 Mock 对象的机制：
+//	 IMocksControl control = EasyMock.createControl();
+//	 java.sql.Connection mockConnection = control.createMock(Connection.class);
+//	 java.sql.Statement mockStatement = control.createMock(Statement.class);
+//	 java.sql.ResultSet mockResultSet = control.createMock(ResultSet.class);
+//	 EasyMock 类的 createControl 方法能创建一个接口 IMocksControl 的对象，该对象能创建并管理多个 Mock 对象。
+//	 如果需要在测试中使用多个 Mock 对象，我们推荐您使用这一机制，因为它在多个 Mock 对象的管理上提供了相对便捷的方法。
+//	 如果 Mock 对象是通过 IMocksControl 接口提供的 createMock 方法生成的（第1节中介绍的第二种Mock对象生成方法），
+//	 那么您依旧可以通过 IMocksControl 接口对它所创建的所有 Mock 对象进行切换：
+//	 control.replay();
+//	 以上的语句能将在第1节中生成的 mockConnection、mockStatement 和 mockResultSet 等3个 Mock 对象都切换成 Replay 状态。
+//	 如果Mock对象是有 IMocksControl 接口所提供的 createMock 方法生成的，那么采用该接口提供的 verify 方法，例如第1节中的 IMocksControl 实例 control：
+//	 control.verify();
+//	 将对 control 实例所生成的 Mock 对象 mockConnection、mockStatement 和 mockResultSet 等进行验证
+//	 
+	 
+//	 如果您要模拟的是一个具体类而非接口，那么您需要下载扩展包 EasyMock Class Extension 2.2.2。在对具体类进行模拟时，
+//	 您只要用 org.easymock.classextension.EasyMock 类中的静态方法代替 org.easymock.EasyMock 类中的静态方法即可。
+	 
+	 
+	 
+	 //http://blog.csdn.net/vking_wang/article/details/9170979
+	 //http://macrochen.iteye.com/blog/298032
+	 
 }
