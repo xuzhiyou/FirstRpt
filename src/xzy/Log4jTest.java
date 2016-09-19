@@ -14,8 +14,8 @@ public class Log4jTest {
 	
 	public static void main(String[] args) {
 		//必须放在方法里
-//		PropertyConfigurator.configure(ClassLoader.getSystemResource("log4j3.properties"));
-		PropertyConfigurator.configure("bin/log4j3.properties");
+//		PropertyConfigurator.configure(ClassLoader.getSystemResource("log4j4.properties"));
+		PropertyConfigurator.configure("src/xzy/log4j2.properties");
 		logger.debug("Start of the main() in TestLog4j");
 		logger.info("Just testing a log message with priority set to INFO");
 		logger.warn("Just testing a log message with priority set to WARN");
