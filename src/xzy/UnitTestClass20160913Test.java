@@ -53,7 +53,7 @@ public class UnitTestClass20160913Test {
 		//同上，解释为：对于输入任何字符串(或EasyMock.isA(String.class))，希望输出"fff"，可执行任意次数，也可不加。
 		EasyMock.expect(easyMockTestInerface.getString(EasyMock.anyString())).andReturn("fff").anyTimes();
 		//void类型方法，参数可为任何字符串。
-		easyMockTestInerface.doctest_In_2(EasyMock.anyString());
+		easyMockTestInerface.doctest_In_2(EasyMock.anyObject(String.class));
 //		EasyMock.expectLastCall().anyTimes();
 	
 		//将Mock接口切换到replay状态.
@@ -86,7 +86,7 @@ public class UnitTestClass20160913Test {
 		double[] value = {1,2,3};
 		double[] realValue = {1,1};
 		
-		EasyMock.expect(easyMockTestInerface.getNum(1)).andReturn(2);
+		EasyMock.expect(easyMockTestInerface.getNum(EasyMock.anyInt())).andReturn(2);
 		
 //		EasyMock.expect(easyMockTestInerface.getArrays(value)).andReturn(realValue);
 //		EasyMock.expect(easyMockTestInerface.getArrays(EasyMock.aryEq(value))).andReturn(realValue);
@@ -96,7 +96,8 @@ public class UnitTestClass20160913Test {
 		
 		unitTestClass.setTestInterface(easyMockTestInerface);
 		Assert.assertEquals(2, unitTestClass.getNums(1));
-		Assert.assertArrayEquals(realValue, unitTestClass.getArrays(value),0);
+		Assert.assertEquals(realValue, unitTestClass.getArrays(value));
+//		Assert.assertArrayEquals(realValue, unitTestClass.getArrays(value),0);
 		
 		EasyMock.verify(easyMockTestInerface);
 	}
@@ -105,13 +106,13 @@ public class UnitTestClass20160913Test {
 	@Test
 	public void testClass(){
 		
-		
+		//mock具体类对象，得添加 objenesis  jar包
 		highArray = EasyMock.createMock(HighArray.class);
-		
+
 		EasyMock.expect(highArray.find(2)).andReturn(true);
 		EasyMock.replay(highArray);
-		
-		Assert.assertEquals(true, true);
+
+		Assert.assertEquals(true, highArray.find(2));
 		EasyMock.verify(highArray);
 	}
 	
